@@ -1,3 +1,7 @@
+// Conner Chew
+// Web Client
+// webclient.c
+
 #include <netdb.h>
 #include <stdio.h>
 #include <string.h>
