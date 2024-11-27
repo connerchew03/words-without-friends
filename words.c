@@ -128,7 +128,7 @@ void *evaluateCommand(void *info)
 		while (strncmp(httpChecker, " HTTP/", 6) != 0)    // Remove the HTTP part from the filepath.
 			httpChecker++;
 		*httpChecker = '\0';
-		while (strncmp(httpChecker, "/words", 6) != 0)
+		while (strncmp(httpChecker, "/words", 6) != 0 && strncmp(httpChecker, "/favicon.ico", 12) != 0)
 			httpChecker--;
 		bool hasMove = false;
 		httpChecker += 6;
