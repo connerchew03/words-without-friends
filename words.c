@@ -1,6 +1,6 @@
 // Conner Chew
 // Words Without Friends: Web Server Edition
-// words_conner_chew.c
+// words.c
 
 #include <arpa/inet.h>
 #include <fcntl.h>
@@ -88,7 +88,7 @@ int main(int argc, char **argv)
 		{
 			new_soc = accept(soc, &other_addr, &other_addr_size);
 			recv(new_soc, recvMsg, 99, 0);
-			if (strncmp(recvMsg, "QUIT", 4) != 0)    // A webclient program can be written to make it possible to send a QUIT command.
+			if (strncmp(recvMsg, "QUIT", 4) != 0)    // I have provided a webclient program to make it possible to send a QUIT command.
 			{
 				attributes.socket_id = new_soc;
 				strncpy(attributes.command, recvMsg, 100);
